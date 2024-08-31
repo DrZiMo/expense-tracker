@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+:root {
+  --bg-color: #f4f4fc;
+  --green-color: #6cce5c;
+  --green-hover: #5eaf51;
+  --red-color: #da4e4e;
+  --red-hover: #ad3f3f;
+  --white: #fff;
+
+  --fs-400: 1rem;
+  --fs-600: 1.5rem;
+  --fs-800: 2rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.normal {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+}
+
+.light {
+  font-weight: var(--fw-light);
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.extra-bold {
+  font-weight: var(--fw-extra-bold);
+}
+
+.fs24 {
+  font-size: var(--fs-600);
+}
+
+.fs32 {
+  font-size: var(--fs-800);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .container {
+  width: 900px;
+  margin-top: 60px;
+}
+
+.wrapper .container .sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.wrapper .container .sections .amount-section,
+.wrapper .container .sections .history-section {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: fit-content;
+  padding: 30px;
+}
+.wrapper .container .sections .amount-section {
+  width: 50%;
+}
+
+.wrapper .container .sections .amount-section .amount-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .container .sections .amount-section .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.wrapper .container .sections .amount-section .buttons .income-button,
+.wrapper .container .sections .amount-section .buttons .expense-button {
+  border: none;
+  padding: 18px 25px;
+  border-radius: 10px;
+  font-size: var(--fs-400);
+  color: #fff;
+  width: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.wrapper .container .sections .amount-section .buttons .income-button {
+  background-color: var(--green-color);
+}
+
+.wrapper .container .sections .amount-section .buttons .income-button:hover,
+.wrapper .container .sections .amount-section .buttons .income-button:focus-visible {
+  background-color: var(--green-hover);
+}
+
+.wrapper .container .sections .amount-section .buttons .expense-button {
+  background-color: var(--red-color);
+}
+
+.wrapper .container .sections .amount-section .buttons .expense-button:hover,
+.wrapper .container .sections .amount-section .buttons .expense-button:focus-visible {
+  background-color: var(--red-hover);
+}
+
+.wrapper .container .sections .amount-section .accounts-part {
+  margin-top: 15px;
+}
+
+.wrapper .container .sections .amount-section .accounts-part .accounts {
+  margin-top: 20px;
+}
+
+.wrapper .container .sections .amount-section .accounts-part .accounts .account {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.wrapper .container .sections .history-section {
+  width: 45%;
+}
+
+.wrapper .container .sections .history-section .history-items {
+  margin-top: 20px;
+}
+
+.wrapper .container .sections .history-section .history-items .history-item {
+  border-left: 8px solid var(--bg-color);
+  padding-inline: 10px;
+  margin-top: 25px;
+}
+
+.wrapper .container .sections .history-section .history-items .history-item.income {
+  border-color: var(--green-color);
+}
+
+.wrapper .container .sections .history-section .history-items .history-item.income .history-amount {
+  color: var(--green-color);
+}
+
+.wrapper .container .sections .history-section .history-items .history-item.expense {
+  border-color: var(--red-color);
+}
+
+.wrapper .container .sections .history-section .history-items .history-item.expense .history-amount {
+  color: var(--red-color);
+}
+
+.wrapper .container .sections .history-section .history-items .history-item .history-primary-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--bg-color);
+  margin-top: 20px;
+}
